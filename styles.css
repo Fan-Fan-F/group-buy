@@ -1,0 +1,57 @@
+:root {
+  --bg: #fff7ed; --card: #fff; --ink: #431407; --muted: #92705c;
+  --accent: #ea580c; --accent-dark: #c2410c; --line: #f3e2d0;
+  --green: #059669; --red: #dc2626;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--ink); }
+.wrap { max-width: 720px; margin: 0 auto; padding: 30px 20px 60px; }
+.head { text-align: center; margin-bottom: 20px; }
+.head h1 { font-size: 25px; }
+.head p { color: var(--muted); font-size: 13px; margin-top: 5px; }
+
+.tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+.tab { flex: 1; height: 42px; border: 1px solid var(--line); background: #fff; border-radius: 11px; font-size: 13px; cursor: pointer; color: var(--muted); }
+.tab.active { background: var(--ink); color: #fff; border-color: var(--ink); font-weight: 700; }
+.tab em { font-style: normal; color: var(--accent); font-weight: 800; }
+.tab.active em { color: #fdba74; }
+
+.mall-list { display: flex; flex-direction: column; gap: 12px; }
+.g-card { background: var(--card); border-radius: 16px; padding: 16px; display: flex; gap: 14px; box-shadow: 0 3px 12px rgba(67,20,7,.06); }
+.g-emoji { width: 84px; height: 84px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 42px; flex: none; }
+.g-main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.g-name { font-size: 15px; font-weight: 700; }
+.g-desc { font-size: 12px; color: var(--muted); margin: 4px 0; }
+.g-need { font-size: 11px; color: var(--accent); background: #ffedd5; width: fit-content; padding: 2px 8px; border-radius: 6px; font-weight: 700; }
+.g-foot { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; padding-top: 8px; }
+.g-price b { font-size: 21px; color: var(--accent); }
+.g-price s { font-size: 12px; color: var(--muted); margin-left: 6px; }
+.g-btns { display: flex; gap: 8px; }
+.g-btns button { border: none; border-radius: 10px; padding: 9px 14px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.btn-solo { background: #f5f0ea; color: var(--muted); }
+.btn-group { background: var(--accent); color: #fff; }
+.btn-group:hover { background: var(--accent-dark); }
+
+/* 团卡片 */
+.team-card { background: var(--card); border-radius: 16px; padding: 16px; margin-bottom: 12px; box-shadow: 0 3px 12px rgba(67,20,7,.06); }
+.team-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 13px; }
+.team-head .mono { font-family: ui-monospace, monospace; color: var(--muted); font-size: 11px; }
+.team-prod { font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+.team-members { display: flex; gap: 6px; align-items: center; margin-bottom: 10px; }
+.member { width: 36px; height: 36px; border-radius: 50%; background: #ffedd5; display: flex; align-items: center; justify-content: center; font-size: 19px; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.12); }
+.member.leader { outline: 2px solid var(--accent); }
+.member.empty { background: #faf6f1; border: 1.5px dashed var(--line); color: var(--muted); font-size: 14px; box-shadow: none; }
+.team-progress { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); }
+.team-timer { font-family: ui-monospace, monospace; color: var(--accent); font-weight: 700; }
+.team-actions { margin-top: 10px; display: flex; gap: 8px; }
+.team-actions button { border: none; border-radius: 9px; padding: 8px 14px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.join-btn { background: var(--accent); color: #fff; }
+.sim-btn { background: #f5f0ea; color: var(--muted); }
+.badge { font-size: 11px; padding: 3px 10px; border-radius: 999px; font-weight: 700; }
+.badge.success { background: #d1fae5; color: #065f46; }
+.badge.failed { background: #fee2e2; color: #991b1b; }
+.badge.ongoing { background: #ffedd5; color: #c2410c; }
+
+.tip { text-align: center; font-size: 12px; color: var(--muted); margin-top: 14px; }
+.empty { text-align: center; color: var(--muted); font-size: 13px; padding: 40px 0; }
+.toast { position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%); background: rgba(67,20,7,.88); color: #fff; padding: 10px 22px; border-radius: 999px; font-size: 13px; z-index: 50; }
