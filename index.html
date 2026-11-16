@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>拼团广场 · Group Buy</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="head">
+    <h1>👭 拼团广场</h1>
+    <p>发起拼团或加入别人的团，人齐自动成团发货</p>
+  </header>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="mall">拼团商品</button>
+    <button class="tab" data-tab="ongoing">进行中的团 <em id="ongoingCount"></em></button>
+    <button class="tab" data-tab="mine">我的拼团</button>
+  </div>
+
+  <section id="tab-mall"><div id="mallList" class="mall-list"></div></section>
+
+  <section id="tab-ongoing" hidden>
+    <div id="ongoingList"></div>
+    <p class="tip">🔧 演示：点「模拟好友参团」可快速填满一个团</p>
+  </section>
+
+  <section id="tab-mine" hidden><div id="mineList"></div></section>
+</main>
+
+<div id="toast" class="toast" hidden></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
